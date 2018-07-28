@@ -1,5 +1,4 @@
-
-#Spectral Granular Synthesis
+# Spectral Granular Synthesis
 
 The Spectral Granular Synthesis software can be obtained at
 http://stefanofasciani.com/sgs.html
@@ -8,7 +7,7 @@ Spectral Granular Synthesis (C) 2018 Stefano Fasciani, University of Wollongong 
 Inquiries: stefano@fasciani.xyz
 
 
-##Description
+## Description
 
 The MATLAB software included in this repository implements the Spectral Granular Synthesis algorithm described in
 S. Fasciani, "Spectral Granular Synthesis" in proceedings of International Computer Music Conference 2018, Daegu, Korea.
@@ -17,7 +16,7 @@ The software has been developed using MATLAB R2017b.
 
 The reporitory includes also MATLAB app and a standalone executable application for WIN and OSX (it requires to install the free MATLAB Runtime)
 
-##Instructions
+## Instructions
 
 ### MATLAB Script
 a) Include the folder 'lib' and its subfolders to the MATLAB search path.
@@ -42,7 +41,7 @@ The executables are 'Release/WIN/files_only/SpectralGranularSinth.exe' and 'Rele
 The standalone application has an interface identical to the MATLAB application described above.
 
 
-##Synthesis parameters and options
+## Synthesis parameters and options
 Fields that are inactive have no effect with the current settings.
 
 **Sampling Rate** sampling frequency (Hz) for the sound synthesis, playback and Output File. The Source File is resampled to match this rate.
@@ -107,7 +106,7 @@ Fields that are inactive have no effect with the current settings.
 
 **Run** Runs the synthesis and generate outputs according to parameters and options. Led is red until done (or in case of error).
 
-##Current Limitations
+## Current Limitations
 The OSX version supports only SPSI Spectrogram Inversion Algorithm
 
 
