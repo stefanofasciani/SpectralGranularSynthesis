@@ -1,15 +1,14 @@
 # Spectral Granular Synthesis
 
-The Spectral Granular Synthesis software can be obtained at
-http://stefanofasciani.com/sgs.html
+The Spectral Granular Synthesis software can be obtained at http://stefanofasciani.com/sgs.html
 
-Spectral Granular Synthesis (C) 2018 Stefano Fasciani, University of Wollongong in Dubai
+Spectral Granular Synthesis (C) 2018 Stefano Fasciani, University of Wollongong in Dubai  
 Inquiries: stefano@fasciani.xyz
 
 
 ## Description
 
-The MATLAB software included in this repository implements the Spectral Granular Synthesis algorithm described in
+The MATLAB software included in this repository implements the Spectral Granular Synthesis algorithm described in  
 S. Fasciani, "Spectral Granular Synthesis" in proceedings of International Computer Music Conference 2018, Daegu, Korea.
 
 The software has been developed using MATLAB R2017b.
@@ -19,25 +18,25 @@ The reporitory includes also MATLAB app and a standalone executable application 
 ## Instructions
 
 ### MATLAB Script
-a) Include the folder 'lib' and its subfolders to the MATLAB search path.
-b) If the library Phaseret (http://ltfat.github.io/phaseret/) is already included included in the MATLAB search path, the subfolder 'lib/phaseret' is not required.
-c) If the library Ltfat (http://ltfat.github.io/) is already included included in the MATLAB search path, the subfolder 'lib/ltfat' is not required.
-d) Specify synthesis parameters and options from line 35 to 69 of SpectralGranularSinth.m.
-e) Enter 'SpectralGranularSinth' in the MATLAB command window or simply run the script 'SpectralGranularSinth.m'.
+a) Include the folder 'lib' and its subfolders to the MATLAB search path.  
+b) If the library Phaseret (http://ltfat.github.io/phaseret/) is already included included in the MATLAB search path, the subfolder 'lib/phaseret' is not required.  
+c) If the library Ltfat (http://ltfat.github.io/) is already included included in the MATLAB search path, the subfolder 'lib/ltfat' is not required.  
+d) Specify synthesis parameters and options from line 35 to 69 of SpectralGranularSinth.m.  
+e) Enter 'SpectralGranularSinth' in the MATLAB command window or simply run the script 'SpectralGranularSinth.m'.  
 
 ### MATLAB Application
-a) to c) as above.
-d) Enter 'SpectralGranularSinthGUI' in the MATLAB command window or simply double click on the file 'SpectralGranularSinthGUI.mlapp'.
-e) Specify synthesis parameters and options in the GUI.
-f) Click on the 'Run' button.
+a) to c) as above.  
+d) Enter 'SpectralGranularSinthGUI' in the MATLAB command window or simply double click on the file 'SpectralGranularSinthGUI.mlapp'.  
+e) Specify synthesis parameters and options in the GUI.  
+f) Click on the 'Run' button.  
 
 ### MATLAB Packaged Application
-a) Open the 'SpectralGranularSinth.mlappinstall' in 'Release\MATLABapp' and install the application (it includes all dependancies).
-b) In te MATLAB window select the APPS tab and select 'SpectralGranularSinth' under 'My Apps'. Then follow e) to f) from above.
+a) Open the 'SpectralGranularSinth.mlappinstall' in 'Release\MATLABapp' and install the application (it includes all dependancies).  
+b) In te MATLAB window select the APPS tab and select 'SpectralGranularSinth' under 'My Apps'. Then follow e) to f) from above.  
 
 ### Standalone
-The three methos above (recommended) require an existing MATLAB installation. A standalone application is provided as well for both WIN and OSX.
-The executables are 'Release/WIN/files_only/SpectralGranularSinth.exe' and 'Release/OSX/files_only/SpectralGranularSinth.app'. Both require a prior installation of MATLAB Runtime (free, available at http://www.mathworks.com/products/compiler/mcr/index.html), as described in the readme.txt file. ALternatively, bundled web installers are provided in 'Release/WIN/installer' and 'Release/OSX/installer' (not recommended because it takes quite some time to download and install the MATLAB Runtime).
+The three methos above (recommended) require an existing MATLAB installation. A standalone application is provided as well for both WIN and OSX.  
+The executables are 'Release/WIN/files_only/SpectralGranularSinth.exe' and 'Release/OSX/files_only/SpectralGranularSinth.app'. Both require a prior installation of MATLAB Runtime (free, available at http://www.mathworks.com/products/compiler/mcr/index.html), as described in the readme.txt file. ALternatively, bundled web installers are provided in 'Release/WIN/installer' and 'Release/OSX/installer' (not recommended because it takes quite some time to download and install the MATLAB Runtime).  
 The standalone application has an interface identical to the MATLAB application described above.
 
 
