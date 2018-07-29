@@ -105,8 +105,6 @@ Fields that are inactive have no effect with the current settings.
 
 **Run** Runs the synthesis and generate outputs according to parameters and options. Led is red until done (or in case of error).
 
-## Current Limitations
-The OSX version supports only SPSI Spectrogram Inversion Algorithm
 
 
 
