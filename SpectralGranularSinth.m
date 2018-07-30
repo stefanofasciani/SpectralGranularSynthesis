@@ -424,7 +424,7 @@ if ~isempty(fileOut)
     audiowrite(fileOut,out_s,Fs_sys);
     if compTimeGran == 1
         [filepath,name,ext] = fileparts(fileOut);
-        fileOutT = [filepath name '_time' ext];
+        fileOutT = [filepath '/' name '_time' ext];
         audiowrite(fileOutT,out_t,Fs_sys);
     end
 end
