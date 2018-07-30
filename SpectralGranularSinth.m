@@ -49,7 +49,7 @@ if ~exist('app','var')
     kaiserBeta = 7; %defines the window shape of kaiser window only, with 0 is retangular
     gammaFast = 0; % 0 computes more accurate gamma for RTPGHI slow, 1 computes less accurate gamma for RTPGHI but fast (computation once only, out of synthesis loop)
 
-    inversionAlgo = 0; %algorithm for spectrum inversion, 0 SPSI, 1 RTPGHI
+    inversionAlgo = 1; %algorithm for spectrum inversion, 0 SPSI, 1 RTPGHI
     thresholdRtphi = 6; %Threshold of RTPGHI 10^-(thresholdRtphi), default is 6
 
     grainSelMode = 1; % 1 = fixed position + random spray; 2 = sequential + random spray; 3 = random;
@@ -279,8 +279,8 @@ end
 
 % the synthesis loop uses two spectrogram inversion techniques (SPSI and
 % RTPGHI). The implementation of such techniques is provided by the
-% Phaseret library by Zden?k Pr?ša (which also requires ltfat library by 
-% Peter L. Søndergaard and Zden?k Pr?ša). Both techniques support real-time
+% Phaseret library by Zden?k Pr?ï¿½a (which also requires ltfat library by 
+% Peter L. Sï¿½ndergaard and Zden?k Pr?ï¿½a). Both techniques support real-time
 % spectrogram inversion computation. The following code snippet is an example
 % of Spectrogram inversion using Phaseret library working on an entire signal s.
 % 
