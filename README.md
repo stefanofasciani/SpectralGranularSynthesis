@@ -73,7 +73,7 @@ Fields that are inactive have no effect with the current settings.
 
 **Kaiser Beta** Parameter determining the shape of the kaiser window (when equal to 0 the window is rectangular).
 
-**Spectrogram Inversion Algorithm** Algorithm used to reconstruct the phase from the Spectra of the grain sequence. Available SPSI and PGHI.
+**Phase Recognition Algorithm** Algorithm used to reconstruct the phase from the Spectra of the grain sequence. Available SPSI, PGHI, or Off (using zero phase).
 
 **PGHI Threshold** Threshold for the PGHI alsorithm, equal to 10^-(value).
 

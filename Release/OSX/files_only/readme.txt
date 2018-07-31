@@ -1,4 +1,4 @@
-SpectralGranularSinth Executable
+SpectralGranularSinthOSX Executable
 
 1. Prerequisites for Deployment 
 
@@ -27,11 +27,11 @@ NOTE: You will need administrator rights to run the MATLAB Runtime installer.
 
 Files to Package for Standalone 
 ================================
--run_SpectralGranularSinth.sh (shell script for temporarily setting environment variables 
- and executing the application)
+-run_SpectralGranularSinthOSX.sh (shell script for temporarily setting environment 
+ variables and executing the application)
    -to run the shell script, type
    
-       ./run_SpectralGranularSinth.sh <mcr_directory> <argument_list>
+       ./run_SpectralGranularSinthOSX.sh <mcr_directory> <argument_list>
        
     at Linux or Mac command prompt. <mcr_directory> is the directory 
     where version 9.3 of the MATLAB Runtime is installed or the directory where 
@@ -41,22 +41,22 @@ Files to Package for Standalone
     If you have version 9.3 of the MATLAB Runtime installed in 
     /mathworks/home/application/v93, run the shell script as:
     
-       ./run_SpectralGranularSinth.sh /mathworks/home/application/v93
+       ./run_SpectralGranularSinthOSX.sh /mathworks/home/application/v93
        
     If you have MATLAB installed in /mathworks/devel/application/matlab, 
     run the shell script as:
     
-       ./run_SpectralGranularSinth.sh /mathworks/devel/application/matlab
+       ./run_SpectralGranularSinthOSX.sh /mathworks/devel/application/matlab
 -MCRInstaller.zip 
     Note: if end users are unable to download the MATLAB Runtime using the
     instructions in the previous section, include it when building your 
     component by clicking the "Runtime downloaded from web" link in the
     Deployment Tool.
--The Macintosh bundle directory structure SpectralGranularSinth.app 
+-The Macintosh bundle directory structure SpectralGranularSinthOSX.app 
     Note: this can be stored in an archive file with the zip command 
-    zip -r SpectralGranularSinth.zip SpectralGranularSinth.app
+    zip -r SpectralGranularSinthOSX.zip SpectralGranularSinthOSX.app
     or the tar command 
-    tar -cvf SpectralGranularSinth.tar SpectralGranularSinth.app
+    tar -cvf SpectralGranularSinthOSX.tar SpectralGranularSinthOSX.app
 -This readme file 
 
 3. Definitions
@@ -93,7 +93,7 @@ ${DYLD_LIBRARY_PATH}:MR/v93/runtime/maci64:MR/v93/sys/os/maci64:MR/v93/bin/maci6
         NOTE: The environment variable syntax utilizes forward 
               slashes (/), delimited by colons (:).  
         NOTE: When deploying standalone applications, you can
-              run the shell script file run_SpectralGranularSinth.sh 
+              run the shell script file run_SpectralGranularSinthOSX.sh 
               instead of setting environment variables. See 
               section 2 "Files to Deploy and Package".    
 

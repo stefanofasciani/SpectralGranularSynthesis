@@ -49,7 +49,7 @@ if ~exist('app','var')
     kaiserBeta = 7; %defines the window shape of kaiser window only, with 0 is retangular
     gammaFast = 0; % 0 computes more accurate gamma for RTPGHI slow, 1 computes less accurate gamma for RTPGHI but fast (computation once only, out of synthesis loop)
 
-    inversionAlgo = 1; %algorithm for spectrum inversion, 0 SPSI, 1 RTPGHI
+    inversionAlgo = 1; %algorithm for spectrum inversion, 0 SPSI, 1 RTPGHI, 2 bypass
     thresholdRtphi = 6; %Threshold of RTPGHI 10^-(thresholdRtphi), default is 6
 
     grainSelMode = 1; % 1 = fixed position + random spray; 2 = sequential + random spray; 3 = random;
@@ -266,6 +266,8 @@ elseif inversionAlgo == 1
     tGradMulConst = grainHop_smp*grainSizeOut_smp/gamma/2;
     fGradMul = @(fGrad) -gamma/(grainHop_smp*grainSizeOut_smp)*fGrad;
     tGradMul = @(tGrad) tGradMulConst*tGrad + tGradPlusConsts;
+elseif inversionAlgo == 2
+    
 else
     error('wrong inversion algorithm');
 end
@@ -310,9 +312,11 @@ for j=1:outChannels
     %output one grain at a time).
     for i=0:(niter - 1)
         
-        %compute current file position (excluding sequential progress)
-        if filePosModAmp ~= 0
-            filePosMod_smp = filePos_smp + round(modulAmp_smp * sin(2*pi*filePosModFreq_f*i + modulAmpOffset_p)) + modulAmpOffset_smp; 
+        %compute current file position (excluding sequential progress component)
+        if grainSelMode ~= 3
+            if filePosModAmp ~= 0 
+                filePosMod_smp = filePos_smp + round(modulAmp_smp * sin(2*pi*filePosModFreq_f*i + modulAmpOffset_p)) + modulAmpOffset_smp; 
+            end
         end
         
         %compute current grain size
@@ -364,6 +368,8 @@ for j=1:outChannels
             tGrad(2:end-1,end) = tGradMul(conv2(logs(:,end),[1;0;-1],'valid'));
             newPhase = comp_rtpghiupdate(logs(:,idx),tGrad(:,idx),fGrad,newPhase,tol(1),grainSizeOut_smp);
             reconFreq = magSpect.*exp(1i*newPhase);      
+        elseif inversionAlgo == 2
+            reconFreq = magSpect;    
         else
             error('wrong inversion algorithm');
         end
