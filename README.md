@@ -99,7 +99,7 @@ Fields that are inactive have no effect with the current settings.
 
 **Spectrum Shift Mode** Set the mode for the circular shift of the bins in the spectrum of the grains, choosing between Fixed shift, Random shift, or sinusoidally Modulated shift.
 
-**Spectrum Shift Amount** Deviation of the random Spectrum Shift, or IAmplitude of the sinusoidal modulation of the Spectrum Shift variation. The value (0 to 1) represent the percentage of thr Spectrum Size, which is floor(Output Grain Size/2).
+**Spectrum Shift Amount** Deviation of the random Spectrum Shift, or IAmplitude of the sinusoidal modulation of the Spectrum Shift variation. The value (-1 to 1) represent the percentage of thr Spectrum Size, which is floor(Output Grain Size/2).
 
 **Spectrum Shift Frequency** Frequency (Hz) of sinusoidal modulation of the Spectrum shift. Not available for Random shift.
 

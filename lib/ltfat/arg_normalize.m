@@ -1,5 +1,5 @@
 function definput=arg_normalize(definput)
-  
+ 
 % Both 'null' and 'empty' do no scaling when normalize is called
 % directly.
 % When used in different functions,

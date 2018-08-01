@@ -28,6 +28,11 @@
 function [grain] = getgrain_fix(snd, grainSize_smp, filePos_smp, spray_smp, sprayOffset_smp)
     
     pos = filePos_smp + (round(rand * spray_smp)) + 1 - sprayOffset_smp;
+    if pos < 1
+        pos = 1;
+    elseif (pos + grainSize_smp - 1) > length(snd)
+        pos = length(snd) - grainSize_smp;
+    end 
     grain = snd(pos:(pos + grainSize_smp - 1),:);
 
 end

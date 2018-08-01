@@ -187,13 +187,13 @@ if grainSelMode == 1 % fixed + random spray + modulation
     if sprayMode == 1 % 1 backward and forward, 2 backward only, 3 forward only
         if (filePos_smp > ((sndLength_smp - grainSizeIn_smp - grainSizeVarAmp_smp - 1) - filePos_smp))
             spray_smp = 2 * round(((sndLength_smp - grainSizeIn_smp - grainSizeVarAmp_smp - 1) - filePos_smp) * spray_perc);
-            modulAmp_smp = round(((sndLength_smp - grainSizeIn_smp - grainSizeVarAmp_smp - 1) - filePos_smp) * filePosModAmp);
+            modulAmp_smp = round(((sndLength_smp - grainSizeIn_smp - grainSizeVarAmp_smp - 1) - filePos_smp) * filePosModAmp) - 1;
             sprayOffset_smp = spray_smp / 2;
             modulAmpOffset_smp = 0;
             modulAmpOffset_p = 0;
         else
             spray_smp = 2 * round(filePos_smp * spray_perc);
-            modulAmp_smp = round(filePos_smp * filePosModAmp);
+            modulAmp_smp = round(filePos_smp * filePosModAmp) - 1;
             sprayOffset_smp = spray_smp / 2;
             modulAmpOffset_smp = 0;
             modulAmpOffset_p = 0;

@@ -2,3 +2,7 @@
 Release/OSX/files_only/run_SpectralGranularSinth.sh
 *.prj
 .DS_Store
+.DS_Store
+.DS_Store
+Release/.DS_Store
+Release/OSX/.DS_Store
