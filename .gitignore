@@ -1,8 +1,15 @@
 
-Release/OSX/files_only/run_SpectralGranularSinth.sh
 *.prj
-.DS_Store
-.DS_Store
 .DS_Store
 Release/.DS_Store
 Release/OSX/.DS_Store
+Release/WIN/installer/.DS_Store
+Release/WIN/files_only/.DS_Store
+Release/WIN/.DS_Store
+Release/OSX/installer/.DS_Store
+Release/OSX/files_only/.DS_Store
+Release/OSX/.DS_Store
+Release/.DS_Store
+lib/phaseret/.DS_Store
+lib/.DS_Store
+.DS_Store
